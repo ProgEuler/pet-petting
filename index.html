@@ -26,6 +26,15 @@
         tailwind.config = {
           theme: {
             extend: {
+              animation: {
+                'fade': 'fade 1s ease-out forwards',
+              },
+              keyframes:{
+                fade:{
+                    '0%' : {opacity: 0, transform: 'translatY(-10px)'},
+                    '100%': { opacity:1, transform: 'translateY(0)'},
+                }
+              },
               colors: {
                 'nav-bg': '#FFF9F4',
                 'yellow-1': '#F9DF8A',
@@ -95,17 +104,17 @@
               </div>
         </nav>
     </header>
-    <main class="mt-20 max-w-screen-xl lg:mx-auto mx-3">
+    <main class="mt-20 max-w-screen-xl lg:mx-auto mx-3 mb-20">
         <!-- hero -->
-         <section class="relative min-h-screen">
+         <section class="relative h-[500px] lg:h-[750px]">
             <div class="lg:w-3/6">
-                <h1 class="text-3xl lg:text-6xl font-title my-6">Pamper Your Pet, <br> Because They Deserve the Bes</h1>
+                <h1 class="text-3xl lg:text-6xl font-title mb-6 opacity-0 animate-fade">Pamper Your Pet, <br> Because They Deserve the Bes</h1>
                 <p class="text-gray-500 my-6">
                     Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!
                 </p>
                 <button class="px-7 py-2 bg-yellow-400 hover:bg-yellow-300 rounded-lg">Find a pet</button>
             </div>
-            <div class="absolute lg:top-0 z-[-1]">
+            <div class="absolute top-56 lg:top-0 z-[-1]">
                 <img class="w-full h-full object-cover" src="c1-assets/cat-big.png" alt="">
             </div>
          </section>
@@ -402,7 +411,7 @@
      <footer class="bg-primary relative">
          <!-- news -->
          <section class="max-w-screen-xl lg:mx-auto mx-3">
-            <div class="flex flex-col lg:flex-row justify-start items-center bg-nav-bg rounded-lg p-4 lg:p-12 gap-4 lg:gap-28 shadow-lg z-10 absolute -top-64">
+            <div class="flex flex-col lg:flex-row justify-start items-center bg-nav-bg rounded-lg p-4 lg:p-12 gap-4 lg:gap-28 shadow-lg z-10 absolute -top-64 w-[350px] lg:w-[1320px] ">
                 <div>
                     <img src="c1-assets/cute-pet-mid.png" alt="">
                 </div>
@@ -414,7 +423,7 @@
                 </div>
             </div>
          </section>
-        <div class="grid grid-cols-1 lg:grid-cols-3 max-w-screen-xl lg:mx-auto mx-3 pt-64 pb-28 justify-between gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 max-w-screen-xl lg:mx-auto mx-3 pt-[550px] lg:pt-[400px] pb-28 justify-between gap-6">
             <div>
                 <div class="flex items-center gap-2 mb-6">
                     <img src="c1-assets/logo-footer.png" alt="">
